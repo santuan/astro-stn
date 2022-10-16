@@ -1,0 +1,100 @@
+::selection {
+  @apply text-gray-900 bg-gray-300 dark:bg-gray-700 dark:text-gray-300;
+}
+
+html {
+  min-width: 360px;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white dark:bg-gray-900;
+}
+
+
+#__next {
+  @apply flex flex-col min-h-screen;
+}
+
+.skip-nav {
+  @apply absolute px-4 py-2 transition-transform duration-200 transform -translate-y-12 left-1/4 -top-8;
+}
+
+*::-webkit-scrollbar {
+  /* Barra de desplazamiento de Chromium */
+  @apply w-2;
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-900;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-gray-900 dark:bg-gray-100;
+}
+
+
+.AppContainer {
+  @apply bg-gray-100;
+  @apply dark:bg-gray-900;
+}
+
+.PageContainer {
+  @apply flex flex-col items-start justify-center w-full max-w-full mx-auto mb-16 lg:max-w-2xl;
+}
+
+.Title {
+  @apply px-4 mb-4 font-sans text-4xl font-medium tracking-tight text-black md:text-4xl;
+  @apply dark:text-white;
+}
+
+.Subtitle {
+  @apply relative block px-4 mb-6 font-sans text-xl text-gray-600;
+  @apply dark:text-gray-400;
+}
+
+.Subtitle a {
+  @apply inline-block mx-1 text-blue-500 underline hover:text-blue-700;
+}
+
+.Divider {
+  @apply w-full border-t border-gray-200;
+  @apply dark:border-gray-800
+}
+
+.theme-toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25em;
+	border-radius: 99em;
+	background-color: var(--theme-code-inline-bg);
+}
+
+.theme-toggle > label:focus-within {
+	outline: 2px solid transparent;
+	box-shadow: 0 0 0 0.08em var(--theme-accent), 0 0 0 0.12em white;
+}
+
+.theme-toggle > label {
+	color: var(--theme-code-inline-text);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.5;
+}
+
+.theme-toggle .checked {
+	color: var(--theme-accent);
+	opacity: 1;
+}
+
+input[name='theme-toggle'] {
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+}

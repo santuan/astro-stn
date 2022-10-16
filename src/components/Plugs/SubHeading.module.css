@@ -1,0 +1,15 @@
+.Container {
+  @apply relative w-full;
+}
+
+.Title {
+  @apply w-full px-4 pb-4 my-12 font-sans text-base font-medium text-black uppercase border-b-2 border-dotted border-gray-50 md:text-2xl;
+}
+
+:global(.dark) .Title  {
+  @apply text-white border-gray-800;
+}
+
+.Misc {
+  @apply pb-4 border-b-4 border-gray-600 dark:border-white;
+}

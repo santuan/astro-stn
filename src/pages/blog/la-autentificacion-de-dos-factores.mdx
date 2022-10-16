@@ -1,0 +1,88 @@
+---
+featured: false
+layout: "../../layouts/BlogPost.astro"
+title: 'La autentificación de dos Factores'
+pubDate: '2021-05-20'
+description: 'Sobre la perdida de códigos nucleares.'
+heroImage: 'https://res.cloudinary.com/srcouto/image/upload/v1624063636/Next-srcouto/la-autentificacion-de-dos-factores/banner.png'
+---
+
+En 1981 el presidente de los Estados Unidos Ronald Reagan fue baleado en Washington <small>DC</small>. El disparo no fue fatal pero estuvo cerca de serlo.
+
+Reagan fue trasladado de urgencia al hospital y en el caos se perdió su “galleta”. Esta galleta era el apodo que se le dio a un pequeña tarjeta sellada dentro de una caja que contenía los códigos secretos que identificarían al presidente por teléfono en el caso de que este decidiera dar la instrucción de disparar un arma nuclear.
+
+Finalmente esta tarjeta fue encontrada. Algunos informes dicen que estaba metida en su zapato durante la vorágine de la situación al llegar al hospital. Otros dicen que fue el <small>FBI</small> quienes se habían apoderado de su ropa y todos sus elementos como evidencia y la tarjeta fue devuelta un par de días después del acontecimiento.
+
+Más allá de cual de estas situaciones es la real (puede que ambas sean ciertas dependiendo del factor del tiempo). La posibilidad de que esos códigos nucleares se hubiesen perdido en un contexto de Guerra Fría agregaba una inestabilidad al mundo que realmente no necesitaba.
+
+### Factores de autentificación
+
+Existen tres factores en que una computadora o cualquier sistema puede identificarnos. Nos puede solicitar:
+
+- Algo que sabemos
+
+- Algo que somos
+
+- Algo que tenemos
+
+Es por eso que la regla de oro para identificar la identidad de una persona es utilizar más de un factor. Al menos dos de tres.
+
+Identificarse con dos contraseñas diferentes nos son mejores que una. Pero dos factores si.
+
+Un ejemplo de autentificación de dos factores podría ser cuando interactuamos con un cajero automático en un banco. Nos solicita una Tarjeta (algo que tenemos) y una Pin (algo que sabemos).
+
+Analicemos estos factores.
+
+### Algo que sabemos
+
+En este tiempo seria nuestra contraseña. Este invento se acredita al Dr. Fernando Corbató y sucedió en el Instituto Tecnológico de Massachusetts (<small>MIT</small>) en 1960. Y en una época en donde el único dispositivo de entrada a un sistema o computadora era un teclado, una contraseña tenia mucho sentido. Algo que sabemos puede ser un <small>PIN</small> (una contraseña corta) o antes de las computadoras podía ser nuestra firma en papel.
+
+Pero utilizar este único factor no es lo ideal. Las firmas pueden ser falsificadas, las contraseñas se pueden divulgar o interceptar. Esto puede darse por un hackeo o alguien mirándote sobre el hombro mientras la escribes. Al no haber una alternativa esta opción se volvió la más razonable.
+
+### Algo que Somos
+
+En este caso podemos hablar de biometría. Pueden ser nuestras huellas digitales o reconocimiento facial. Estos funcionan muy bien para probar que una persona es quien dice ser y son más difíciles de interceptar aunque tiene sus desventajas. El sistema tiene que confiar que el dispositivo que está leyendo esta huella o chequeando un rostro no se ha visto comprometido. Y si nuestra huella se filtra no tenemos manera de modificarla. Además pretender que no sabemos una contraseña no funcionaria con nuestra cabeza.
+
+Algunas personas dicen que hay un cuarto factor de autentificación que sería “el lugar en el que estamos”. La idea de que si nuestra tarjeta de crédito repentinamente se mueve de un lugar a otro del mundo debería valer la pena comprobar que está pasando. Muy similar a “algo que somos”.
+
+Los escritores de ciencia ficción han imaginado complejos sistemas de inteligencia artificial que podrían aprender patrones de comportamiento a través del tiempo y reconocerlos. O sociedades panópticas en donde la privacidad es algo del pasado y todo el mundo sabe donde esta todo el mundo y que están haciendo todo el tiempo.
+
+Hoy en día solo tenemos lo que somos. Nuestra huella digital y nuestros rostros.
+
+### Algo que tenemos
+
+Ejemplos de esto seria una tarjeta de crédito, un teléfono celular o la llave de una casa. Son ideales pero solo funcionan cuando estamos en la misma ubicación física. Pero ¿Cómo se comprueba que alguien tiene un objeto físico cuando se está en un lugar completamente diferente?
+
+Antes de los celulares (smartphones) esto era mucho mas complejo y requería que cada persona tuviera en su casa un lector de tarjetas. Hoy en día es mucho más sencillo ya que casi todo el mundo tiene un celular. Esto es algo físico que tenemos que puede funcionar con un Token con solo enviar una notificación a una aplicación.
+
+Normalmente esto es funciona bien. Se envía un código al teléfono o un mensaje pero no es lo ideal. El <small>SMS</small> no es seguro y en su historial hay historias en donde estafadores convencen a un proveedor de telefonía a que mueva el numero de un teléfono celular a otro que este estafador controla.
+
+También existen aplicaciones de autentificación. Estos generan un código único que se configura en la app y guarda un código mucho más largo en su servidor. Entonces combina ese código con el código que se genera con el horario en tiempo real en el que se lo solicita y cada minuto uno obtiene un numero distinto de 6 dígitos para probar que uno tiene físicamente este teléfono.
+
+Básicamente es una contraseña que nuestro teléfono sabe pero nosotros no. Esta contraseña puede ser corta ya que dura solamente un minuto.
+
+Por supuesto esto solo funcionaria si estamos hablando con un banco y no con una pagina web fraudulenta haciéndose pasar por un banco. Con lo cual les estaríamos dando el numero en bandeja. Y ellos se harían pasar por nosotros y no seria para nada ideal.
+
+Compañías como Google utilizan pequeños dispositivos <small>USB</small> de alta seguridad. Se los dieron a todos sus empleados y dicen haber reducidos los ataques de fraude a cero.
+
+Esto involucra matemática de alta complejidad y básicamente se asegura de que estemos conectándonos al servidor verdadero y certificado. Y como no hay nada que tenemos que escribir, copiar y pegar, no hay manera de que sin querer o por error le enviemos el código a una persona externa. Se nos requiere tener el objeto físico.
+
+### Volviendo a los códigos nucleares.
+
+Estos códigos utilizan tres factores de autentificación.
+
+- **Algo que tenemos** – La “galleta” o la tarjeta física.
+
+- **Algo que sabemos** – Cual de todos los códigos que están en esa tarjeta es el verdadero.
+
+- **Algo que somos** – El presidente tenia que tener acceso a la infraestructura para poder realizar esa llamada.
+
+Obviamente todos estos factores solamente podían verificar que era realmente el presidente de los Estados Unidos el que estaba generando esa llamada y dando la orden. Que la identidad era la correcta. Pero no tenían manera de saber si el presidente estaba en su sano juicio al momento de hacerla, si estaba siendo obligado u engañado.
+
+En el mismo sentido podemos tener todos los múltiples factores de autentificación para una cuenta de un banco pero no nos ayudara de nada si este banco o empresa o servicio de mail ha sido hackeado y la información que recibimos en realidad viene de un estafador.
+
+Las computadoras solo entienden lo que les decimos y no tienen idea de cual era nuestra intención y por lo tanto no pueden detenernos de hacer algo de lo que podríamos arrepentirnos.
+
+Pero eso si, pueden al menos estar seguras de que somos nosotros quienes estamos preguntando.
+
+_Contenido copiado y traducido del siguiente video de Tom Scott_

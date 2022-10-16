@@ -1,0 +1,37 @@
+.Container {
+  @apply relative w-full px-4 py-6 font-sans duration-300 hover:shadow-lg border-t border-b rounded border-gray-200 opacity-90 border-opacity-30 hover:opacity-100;
+}
+
+:global(.dark) .Container {
+  @apply hover:shadow-xl opacity-90 border-gray-800 hover:opacity-100;
+}
+
+.Title {
+  @apply inline-block pr-4 mb-2 text-2xl font-medium duration-300 md:text-xl text-blue-400 hover:underline underline-offset-8 ;
+}
+
+:global(.dark) .Title  {
+  @apply text-blue-600;
+}
+
+.Title span {
+  @apply text-gray-900 ;
+}
+
+:global(.dark) .Title span {
+  @apply text-white;
+}
+
+.Icon {
+  @apply absolute top-0 right-0 mx-3 text-2xl font-medium mt-7 opacity-80;
+  @apply dark:text-gray-100;
+}
+
+.Description {
+  @apply pb-2 pr-4 text-base md:text-lg font-light;
+}
+
+:global(.dark) .Description {
+  @apply text-white;
+}
+

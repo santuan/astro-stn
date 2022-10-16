@@ -1,0 +1,24 @@
+.Footer {
+  @apply relative flex flex-col items-start justify-center w-full max-w-full py-6 mx-auto overflow-hidden;
+}
+
+.Divider {
+  @apply w-full mb-8;
+}
+
+.Grid {
+  @apply grid w-full max-w-3xl  pb-16 mx-auto text-center;
+}
+
+.GridItem {
+  @apply flex flex-col space-y-4;
+  @apply dark:text-white;
+}
+
+.GridItem a {
+  @apply hover:font-bold;
+}
+:global(.dark) .GridItem a,
+:global(.dark) .GridItem p {
+  @apply text-white;
+}

@@ -1,0 +1,15 @@
+.Title {
+  @apply px-4 mb-4 font-sans w-full text-left text-4xl font-medium md:text-3xl ;
+}
+
+:global(.dark) .Title  {
+  @apply text-white border-gray-800;
+}
+
+.Subtitle {
+  @apply relative block px-4 mb-6 font-sans text-xl;
+}
+
+:global(.dark) .Subtitle  {
+  @apply text-white border-gray-800;
+}

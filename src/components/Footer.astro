@@ -1,0 +1,17 @@
+---
+import styles from "./Footer.module.css";
+const today = new Date();
+---
+
+<footer class={styles.Footer}>
+  <div class={styles.Grid}>
+    <div class={styles.GridItem}>
+      <a href="/"> Inicio</a>
+      <a href="/about"> Contacto</a>
+      <a target="_blank" rel="noopener noreferrer" href="https://github.com/santuan/">GitHub</a>
+      <a rel="noopener noreferrer" href="/cv">CV</a>
+      <p> &copy; {today.getFullYear()}</p>
+    </div>
+  </div>
+</footer>
+

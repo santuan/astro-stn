@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Page.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import styles from "../components/BlogPost.module.css";
+import Heading from "../components/Plugs/Heading.jsx";
+const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
+  (a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+---
+
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <Heading title="Traducciones 📜" subtitle=""/>
+  {
+    posts.map((post) => (
+      <div class={styles.Container}>
+        <a class={styles.Title} href={post.url}>
+          <span>{post.frontmatter.title}</span>
+        </a>
+        <p class={styles.Description}>{post.frontmatter.description}</p>
+      </div>
+    ))
+  }
+</Layout>
+
