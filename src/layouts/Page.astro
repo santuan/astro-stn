@@ -3,33 +3,33 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-
 ---
 
-<script is:inline>
-  // This code was migrated/copied from ThemToggleBotton to make the
-  // dark mode toggle instant, vs. hidden inside of a Preact useEffect() call.
-  const theme = (() => {
-    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-      return localStorage.getItem('theme');
-    }
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
-    return 'light';
-  })();
-  if (theme === 'light') {
-    document.documentElement.classList.remove('dark');
-  } else {
-    document.documentElement.classList.add('dark');
-  }
-</script>
-
 <html lang="es">
-  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <script is:inline>
+      // This code was migrated/copied from ThemToggleBotton to make the
+      // dark mode toggle instant, vs. hidden inside of a Preact useEffect() call.
+      const theme = (() => {
+        if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      })();
+      if (theme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+  </head>
   <body>
     <Header />
-    <main class="flex flex-col justify-center px-4 pt-24 bg-white lg:px-8 dark:bg-gray-900">
+    <main class="flex flex-col justify-center px-0 pt-24 bg-white lg:px-8 dark:bg-gray-900">
       <div class="flex flex-col items-start justify-center w-full max-w-full mx-auto mb-16 lg:max-w-2xl">
         <slot />
       </div>

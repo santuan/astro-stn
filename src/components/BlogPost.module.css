@@ -7,15 +7,15 @@
 }
 
 .Title {
-  @apply inline-block pr-4 mb-2 text-2xl font-medium duration-300 md:text-xl text-blue-400 hover:underline underline-offset-8 ;
+  @apply inline-block pr-4 mb-2 text-2xl font-medium duration-300 md:text-xl text-blue-400 hover:underline underline-offset-8;
 }
 
-:global(.dark) .Title  {
+:global(.dark) .Title {
   @apply text-blue-600;
 }
 
 .Title span {
-  @apply text-gray-900 ;
+  @apply text-gray-900;
 }
 
 :global(.dark) .Title span {
@@ -34,4 +34,3 @@
 :global(.dark) .Description {
   @apply text-white;
 }
-

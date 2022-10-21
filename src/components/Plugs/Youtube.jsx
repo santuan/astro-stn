@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 export default function Youtube(props) {
-  const { videoId, width = '100%', height = 450, title } = props;
+  const { videoId, width = "100%", height = 450, title } = props;
   const src = `https://www.youtube.com/embed/${videoId}`;
 
   return (

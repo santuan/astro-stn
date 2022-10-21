@@ -1,21 +1,36 @@
-import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
+import image from "@astrojs/image";
+import preact from "@astrojs/preact";
+import mdx from "@astrojs/mdx";
+import react from "@astrojs/react";
+import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import vue from "@astrojs/vue";
-import react from "@astrojs/react";
-import image from "@astrojs/image";
-import { remarkReadingTime } from './remark-reading-time.mjs';
-
-import preact from "@astrojs/preact";
+import { defineConfig } from "astro/config";
+import { remarkReadingTime } from "./lib/remark-reading-time.mjs";
+import Icons from 'unplugin-icons/vite'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://srcouto.netlify.app',
-  markdown: {
-    remarkPlugins: [remarkReadingTime]
+  site: "https://srcouto.netlify.app",
+  integrations: [
+    mdx({
+      remarkPlugins: [remarkReadingTime],
+      // Astro defaults applied
+    }),
+    sitemap(),
+    tailwind(),
+    vue(),
+    react(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    preact(),
+  ],
+  vite: {
+    plugins: [
+      Icons({
+        compiler: 'astro',
+      }),
+    ],
   },
-  integrations: [mdx(), sitemap(), tailwind(), vue(), react(), image({
-    serviceEntryPoint: '@astrojs/image/sharp'
-  }), preact()]
 });

@@ -3,6 +3,7 @@ import PageLayout from "../layouts/Page.astro";
 import SubHeading from "../components/Plugs/SubHeading.jsx";
 import styles from "../components/BlogPost.module.css";
 import Heading from "../components/Plugs/Heading.jsx";
+
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
   (a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
@@ -16,7 +17,7 @@ const myFeaturedPost = posts.filter((post) => post.frontmatter.featured);
     title="Holis! 👋"
     subtitle="En este espacio encontrará interesantes textos, historias y recursos que se relacionan de alguna manera con el mundo del diseño, la programación y el software libre."
   />
-  <SubHeading client:visible title="Traducciones" />
+  <SubHeading client:visible title="Traducciones recomendadas" link="true" />
   {
     myFeaturedPost.map((post) => (
       <div class={styles.Container}>

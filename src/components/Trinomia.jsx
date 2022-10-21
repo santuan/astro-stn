@@ -1,11 +1,8 @@
 import React from "react";
-import Confetti from "react-dom-confetti";
 export default function Trinomia() {
   return (
     <div className="flex flex-col items-center justify-center w-full py-20 overflow-hidden border-b dark:border-gray-700">
-      <p className="w-full mb-6 font-mono text-center select-all dark:text-white">
-      santuan.bot@gmail.com
-      </p>
+      <p className="w-full mb-6 font-mono text-center select-all dark:text-white">santuan.bot@gmail.com</p>
       <button
         onClick={() => {
           copyToClipboard("santuan.bot@gmail.com");

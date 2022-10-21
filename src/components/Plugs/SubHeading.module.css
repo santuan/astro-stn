@@ -1,15 +1,11 @@
 .Container {
-  @apply relative w-full;
+  @apply relative w-full flex justify-between items-center;
 }
 
 .Title {
-  @apply w-full px-4 pb-4 my-12 font-sans text-base font-medium text-black uppercase border-b-2 border-dotted border-gray-50 md:text-2xl;
+  @apply w-full px-4 my-6 font-sans text-base font-medium uppercase opacity-80 md:text-xl dark:text-white;
 }
 
 :global(.dark) .Title  {
   @apply text-white border-gray-800;
-}
-
-.Misc {
-  @apply pb-4 border-b-4 border-gray-600 dark:border-white;
 }
