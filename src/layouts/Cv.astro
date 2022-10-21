@@ -1,0 +1,37 @@
+---
+import CvHead from "../components/CvHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+---
+
+<html lang="en">
+  <head>
+    <CvHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <script is:inline>
+      // This code was migrated/copied from ThemToggleBotton to make the
+      // dark mode toggle instant, vs. hidden inside of a Preact useEffect() call.
+      const theme = (() => {
+        if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      })();
+      if (theme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+  </head>
+  <body>
+    <main
+      class="relative px-4 pt-12 pb-8 overflow-x-hidden font-sans print:text-gray-900 md:pt-20 print:pt-3 print:md:pt-3 cvPage"
+    >
+      <slot />
+    </main>
+  </body>
+</html>
