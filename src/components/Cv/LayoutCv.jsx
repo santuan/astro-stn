@@ -1,12 +1,4 @@
-import { useTheme } from 'next-themes';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { AiOutlineDownload } from 'react-icons/ai';
-import { HiLightBulb } from 'react-icons/hi';
-import { MdLightbulbOutline } from 'react-icons/md';
-import { RiHome4Fill, RiHome4Line } from 'react-icons/ri';
 
 export default function CvPage(props) {
   const [mounted, setMounted] = useState(false);

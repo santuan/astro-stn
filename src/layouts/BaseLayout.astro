@@ -3,6 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Offcanvas from "../components/Offcanvas/Offcanvas.vue";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { PageTransition } from 'astro-page-transition';
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
 
@@ -29,6 +30,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
     </script>
   </head>
   <body>
+    <PageTransition speed={500} zIndex={99999} />
     <Offcanvas client:idle/>
     <Header />
     <main class="flex flex-col relative z-10 justify-center px-4 pt-24 bg-white lg:px-8 dark:bg-gray-900">
