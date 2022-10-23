@@ -16,9 +16,8 @@ const {
 ---
 
 <Layout>
-  <div class="px-4 lg:px-0">
-  <h1 class="mb-4 font-sans text-4xl text-gray-900 dark:text-white font-medium md:text-5xl">{title}</h1>
-  <h2 class="relative block mb-6 font-sans text-2xl text-gray-900 dark:text-white">{description}</h2>
+  <h1 class="mb-4 font-sans text-3xl text-gray-900 dark:text-white font-medium md:text-4xl">{title}</h1>
+  <h2 class="relative block mb-6 font-sans text-xl md:text-xl text-gray-900 dark:text-white">{description}</h2>
   <hr class="w-full my-1 max-w-2xl mx-auto border-t border-gray-300 border-dotted dark:border-gray-600" />
   <div class="flex items-center w-full max-w-2xl mx-auto my-3 justify-start text-gray-800 dark:text-gray-300">
     <div class="flex items-center">
@@ -33,5 +32,4 @@ const {
   <article class="w-full pb-12 font-serif prose prose-lg lg:prose-xl hyphens dark:prose-invert max-w-none">
     <slot />
   </article>
-</div>
 </Layout>

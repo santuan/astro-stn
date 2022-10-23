@@ -6,7 +6,7 @@
       :class="[show ? '  opacity-0 select-none z-0 ' : ' opacity-100 z-[998] ']"
     />
     <button
-      class="fixed text-lg justify-center items-center dark:bg-transparent opacity-80 hover:opacity-100 p-2 dark:text-gray-100 bg-gray-100 text-gray-900 right-0 z-[999] flex top-1"
+      class="fixed text-lg justify-center items-center dark:bg-transparent opacity-80 hover:opacity-100 p-2 dark:text-gray-100 bg-white font-bold text-gray-900 right-0 z-[999] flex top-1"
       @click="show = !show"
     >
       <span>Menú</span>
@@ -26,7 +26,7 @@
       :class="[show ? '  translate-x-full ' : ' translate-x-0  ']"
     >
       <a id="home" href="/"> <span>Inicio</span> </a>
-      <a id="home" href="/blog"> <span>Blog</span> </a>
+      <a id="home" href="/traducciones"> <span>Traducciones</span> </a>
       <a id="home" href="/about"> <span>Contacto</span> </a>
     </div>
   </div>

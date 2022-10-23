@@ -3,7 +3,7 @@
 }
 
 .Title {
-  @apply w-full px-4 my-6 font-sans text-base font-medium uppercase opacity-80 md:text-xl dark:text-white;
+  @apply w-full  my-6 font-sans text-base font-medium uppercase opacity-80 md:text-xl dark:text-white;
 }
 
 :global(.dark) .Title  {

@@ -1,0 +1,4 @@
+# Block all crawlers for /accounts
+User-agent: *
+Disallow: /cv
+Noindex: /cv/

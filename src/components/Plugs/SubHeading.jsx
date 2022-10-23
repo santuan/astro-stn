@@ -8,8 +8,8 @@ const SubHeading = ({ title, link }) => {
         <span className={styles.Misc}>{title}</span>
       </h2>
       {link && (
-        <a href="/blog" className="flex items-center justify-between w-32 cursor-pointer dark:text-white group">
-          <span className="text-xs uppercase duration-300 opacity-0 group-hover:opacity-90">Ver más</span>
+        <a href="/traducciones" className="flex items-center justify-between w-32 cursor-pointer dark:text-white group">
+          <span className="text-xs uppercase duration-300 opacity-0 group-hover:-translate-x-2 group-hover:opacity-90">Ver más</span>
           <svg
             className="text-xl duration-300 -translate-x-4 group-hover:-translate-x-6 dark:fill-white"
             width="32"
