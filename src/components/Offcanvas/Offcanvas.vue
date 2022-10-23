@@ -1,11 +1,14 @@
 <template>
   <div class="lg:hidden">
     <button
-      class="fixed inset-0 bg-white/80 dark:bg-gray-900/80 duration-300  backdrop-blur-md"
+      class="fixed inset-0 bg-white/80 dark:bg-gray-900/80 duration-300 backdrop-blur-md"
       @click="show = !show"
       :class="[show ? '  opacity-0 select-none z-0 ' : ' opacity-100 z-[998] ']"
     />
-    <button class="fixed dark:bg-gray-900 opacity-80 hover:opacity-100 p-2 dark:text-gray-100 bg-gray-100 text-gray-900 right-0 z-[999] flex top-2" @click="show = !show">
+    <button
+      class="fixed dark:bg-gray-900 opacity-80 hover:opacity-100 p-2 dark:text-gray-100 bg-gray-100 text-gray-900 right-0 z-[999] flex top-2"
+      @click="show = !show"
+    >
       <span>Menú</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
