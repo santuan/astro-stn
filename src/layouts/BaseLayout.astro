@@ -1,0 +1,41 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Offcanvas from "../components/Offcanvas/Offcanvas.jsx";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+---
+
+<html lang="es">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <script is:inline>
+      // This code was migrated/copied from ThemToggleBotton to make the
+      // dark mode toggle instant, vs. hidden inside of a Preact useEffect() call.
+      const theme = (() => {
+        if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+          return localStorage.getItem("theme");
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      })();
+      if (theme === "light") {
+        document.documentElement.classList.remove("dark");
+      } else {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+  </head>
+  <body>
+    <Offcanvas client:load/>
+    <Header />
+    <main class="flex flex-col justify-center px-0 pt-24 bg-white lg:px-8 dark:bg-gray-900">
+      <div class="flex flex-col items-start justify-center w-full max-w-full mx-auto mb-16 lg:max-w-2xl">
+        <slot />
+      </div>
+      <Footer/>
+    </main>
+  </body>
+</html>
