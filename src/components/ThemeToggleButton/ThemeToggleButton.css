@@ -1,7 +1,7 @@
 .theme-toggle {
   display: inline-flex;
   align-items: center;
-  @apply p-3 absolute right-32 top-3.5 lg:top-0 lg:relative lg:right-0;
+  @apply p-3 absolute right-32 top-3.5 lg:top-0 lg:relative lg:right-6;
   background-color: var(--theme-code-inline-bg);
 }
 

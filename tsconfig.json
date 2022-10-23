@@ -2,6 +2,14 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "jsx": "preserve",
-    "types": ["unplugin-icons/types/astro", "@astrojs/image/client"]
+    "types": ["unplugin-icons/types/astro", "@astrojs/image/client"],
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@styles/*": ["src/styles/*"],
+      "@src/*": ["src/*"]
+    }
   }
 }

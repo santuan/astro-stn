@@ -1,5 +1,5 @@
 .Container {
-  @apply relative w-full  py-6 font-sans duration-300 hover:shadow-lg border-t border-b rounded border-gray-200 opacity-90 border-opacity-30 hover:opacity-100;
+  @apply relative w-full -mx-4 px-4 py-6 font-sans duration-300 hover:shadow-lg border-t border-b rounded border-gray-200 opacity-90 border-opacity-30 hover:opacity-100;
 }
 
 :global(.dark) .Container {
@@ -28,7 +28,7 @@
 }
 
 .Description {
-  @apply pb-2 pr-4 text-base md:text-lg font-light;
+  @apply pb-2 pr-4 text-base md:text-lg font-normal;
 }
 
 :global(.dark) .Description {

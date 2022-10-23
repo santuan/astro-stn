@@ -1,8 +1,8 @@
 ---
-import PageLayout from "../layouts/Page.astro";
-import SubHeading from "../components/Plugs/SubHeading.jsx";
-import styles from "../components/BlogPost.module.css";
-import Heading from "../components/Plugs/Heading.jsx";
+import PageLayout from "@layouts/Page.astro";
+import SubHeading from "@components/Plugs/SubHeading.jsx";
+import styles from "@components/BlogPost.module.css";
+import Heading from "@components/Plugs/Heading.jsx";
 
 const posts = (await Astro.glob("./traducciones/*.{md,mdx}")).sort(
   (a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()

@@ -1,4 +1,5 @@
 import React from "react";
+
 export default function Trinomia() {
   return (
     <div className="flex flex-col items-center justify-center w-full py-20 overflow-hidden border-b dark:border-gray-700">

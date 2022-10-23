@@ -1,7 +1,7 @@
 <template>
   <div class="lg:hidden">
     <button
-      class="fixed inset-0 bg-white/80 dark:bg-gray-900/80 duration-300 backdrop-blur-md"
+      class="fixed inset-0 bg-white/60 dark:bg-gray-900/60 duration-300 backdrop-blur"
       @click="show = !show"
       :class="[show ? '  opacity-0 select-none z-0 ' : ' opacity-100 z-[998] ']"
     />
@@ -22,12 +22,12 @@
       </svg>
     </button>
     <div
-      class="fixed right-0 text-right font-mono text-lg space-y-6 pt-12 top-0 bottom-0 bg-white dark:bg-gray-900 dark:text-white duration-700 w-64 p-3 z-[1000] flex flex-col"
+      class="fixed right-0 text-center shadow-lg font-mono text-2xl space-y-12 top-0 bottom-0 bg-white dark:bg-gray-900 dark:text-white duration-700 w-64 p-3 z-[1000] flex justify-start pt-12 flex-col"
       :class="[show ? '  translate-x-full ' : ' translate-x-0  ']"
     >
       <a id="home" href="/"> <span>Inicio</span> </a>
       <a id="home" href="/traducciones"> <span>Traducciones</span> </a>
-      <a id="home" href="/about"> <span>Contacto</span> </a>
+      <a id="home" href="/contacto"> <span>Contacto</span> </a>
     </div>
   </div>
 </template>

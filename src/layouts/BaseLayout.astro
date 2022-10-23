@@ -1,10 +1,9 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Offcanvas from "../components/Offcanvas/Offcanvas.vue";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { PageTransition } from 'astro-page-transition';
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import BaseHead from "@components/BaseHead/BaseHead.astro";
+import Offcanvas from "@components/Offcanvas/Offcanvas.vue";
+import Header from "@components/Header/Header.astro";
+import Footer from "@components/Footer/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@src/config";
 ---
 
 <html lang="es">
@@ -28,16 +27,18 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
         document.documentElement.classList.add("dark");
       }
     </script>
+    <script>
+      import "../scripts/router.js";
+    </script>
   </head>
   <body>
-    <PageTransition speed={1200} zIndex={99999} />
-    <Offcanvas client:idle/>
+    <Offcanvas client:idle />
     <Header />
-    <main class="flex flex-col relative z-10 justify-center px-4 lg:px-0 pt-24 bg-white  dark:bg-gray-900">
+    <main class="flex flex-col relative z-10 justify-center px-4 lg:px-0 pt-24 bg-white dark:bg-gray-900">
       <div class="flex flex-col items-start justify-center w-full max-w-full mx-auto mb-16 lg:max-w-2xl">
         <slot />
       </div>
-      <Footer/>
+      <Footer />
     </main>
   </body>
 </html>
