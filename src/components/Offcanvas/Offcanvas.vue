@@ -6,7 +6,7 @@
       :class="[show ? '  opacity-0 select-none z-0 ' : ' opacity-100 z-[998] ']"
     />
     <button
-      class="fixed dark:bg-gray-900 opacity-80 hover:opacity-100 p-2 dark:text-gray-100 bg-gray-100 text-gray-900 right-0 z-[999] flex top-2"
+      class="fixed text-lg justify-center items-center dark:bg-transparent opacity-80 hover:opacity-100 p-2 dark:text-gray-100 bg-gray-100 text-gray-900 right-0 z-[999] flex top-1"
       @click="show = !show"
     >
       <span>Menú</span>
@@ -22,7 +22,7 @@
       </svg>
     </button>
     <div
-      class="fixed right-0 top-0 bottom-0 bg-white dark:bg-gray-900 dark:text-white duration-700 w-64 p-3 z-[1000] flex flex-col"
+      class="fixed right-0 text-right font-mono text-lg space-y-6 pt-12 top-0 bottom-0 bg-white dark:bg-gray-900 dark:text-white duration-700 w-64 p-3 z-[1000] flex flex-col"
       :class="[show ? '  translate-x-full ' : ' translate-x-0  ']"
     >
       <a id="home" href="/"> <span>Inicio</span> </a>

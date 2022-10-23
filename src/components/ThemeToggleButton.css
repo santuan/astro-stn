@@ -1,7 +1,7 @@
 .theme-toggle {
   display: inline-flex;
   align-items: center;
-  @apply h-6 w-6 absolute right-32 top-3.5 lg:top-0 lg:relative lg:right-0;
+  @apply p-3 absolute right-32 top-3.5 lg:top-0 lg:relative lg:right-0;
   background-color: var(--theme-code-inline-bg);
 }
 
@@ -19,7 +19,7 @@
   opacity: 1;
   z-index: 1;
   cursor: pointer;
-  @apply bg-white dark:bg-gray-900
+  @apply bg-white dark:bg-transparent p-3
 }
 
 .theme-toggle .checked {
