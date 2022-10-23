@@ -16,22 +16,20 @@ const {
 ---
 
 <Layout>
-  <div class="flex flex-col items-start md:px-4 justify-center w-full max-w-full mx-auto mb-16 lg:max-w-2xl">
-    <h1 class="mb-4 font-sans text-4xl text-gray-900 dark:text-white font-medium md:text-5xl">{title}</h1>
-    <h4 class="relative block mb-6 font-sans text-2xl text-gray-900 dark:text-white">{description}</h4>
-    <hr class="w-full my-1 max-w-2xl mx-auto border-t border-gray-300 border-dotted dark:border-gray-600" />
-    <div class="flex items-center w-full max-w-2xl mx-auto my-3 justify-start text-gray-800 dark:text-gray-300">
-      <div class="flex items-center">
-        {pubDate && <time class="capitalize font-caption text-base ">{pubDate}</time>}
-      </div>
-      <span class="px-4">•</span>
-      <div class="text-base font-caption min-w-32 md:mt-0">
-        {minutesRead} de lectura
-      </div>
+  <h1 class="mb-4 font-sans text-4xl text-gray-900 dark:text-white font-medium md:text-5xl">{title}</h1>
+  <h4 class="relative block mb-6 font-sans text-2xl text-gray-900 dark:text-white">{description}</h4>
+  <hr class="w-full my-1 max-w-2xl mx-auto border-t border-gray-300 border-dotted dark:border-gray-600" />
+  <div class="flex items-center w-full max-w-2xl mx-auto my-3 justify-start text-gray-800 dark:text-gray-300">
+    <div class="flex items-center">
+      {pubDate && <time class="capitalize font-caption text-base ">{pubDate}</time>}
     </div>
-    <hr class="w-full my-1 max-w-2xl mx-auto border-t border-gray-300 border-dotted dark:border-gray-600" />
-    <article class="w-full pb-12 font-serif prose prose-lg lg:prose-xl hyphens dark:prose-invert max-w-none">
-      <slot />
-    </article>
+    <span class="px-4">•</span>
+    <div class="text-base font-caption min-w-32 md:mt-0">
+      {minutesRead} de lectura
+    </div>
   </div>
+  <hr class="w-full my-1 max-w-2xl mx-auto border-t border-gray-300 border-dotted dark:border-gray-600" />
+  <article class="w-full pb-12 font-serif prose prose-lg lg:prose-xl hyphens dark:prose-invert max-w-none">
+    <slot />
+  </article>
 </Layout>

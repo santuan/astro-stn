@@ -1,6 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Offcanvas from "../components/Offcanvas/Offcanvas.jsx";
+import Offcanvas from "../components/Offcanvas/Offcanvas.vue";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
@@ -29,9 +29,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
     </script>
   </head>
   <body>
-    <Offcanvas client:load/>
+    <Offcanvas client:idle/>
     <Header />
-    <main class="flex flex-col justify-center px-0 pt-24 bg-white lg:px-8 dark:bg-gray-900">
+    <main class="flex flex-col relative z-10 justify-center px-4 pt-24 bg-white lg:px-8 dark:bg-gray-900">
       <div class="flex flex-col items-start justify-center w-full max-w-full mx-auto mb-16 lg:max-w-2xl">
         <slot />
       </div>
