@@ -4,14 +4,10 @@ import ThemeToggleButton from "@components/ThemeToggleButton/ThemeToggleButton";
 import { SITE_TITLE } from "@src/config";
 ---
 
-<div
-  class="fixed left-0 z-50 right-0 top-0 backdrop-blur-lg text-gray-900 bg-white border-b border-gray-200 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100 bg-opacity-90 dark:bg-opacity-50 hue-rotate-15"
-  data-turbo-permanent
-  id="header"
->
-  <header class="max-w-full px-4 lg:px-0 mx-auto lg:max-w-2xl flex items-center justify-between w-full py-3">
+<div class="headerContainer">
+  <header class="header">
     <HeaderLink class="logo" href="/">{SITE_TITLE}</HeaderLink>
-    <nav class="space-x-6 font-mono uppercase hidden lg:flex items-center mr-5 w-full justify-end">
+    <nav>
       <HeaderLink href="/traducciones">Traducciones</HeaderLink>
       <HeaderLink href="/contacto">Contacto</HeaderLink>
     </nav>
@@ -19,8 +15,20 @@ import { SITE_TITLE } from "@src/config";
   </header>
 </div>
 
-<style>
+<style is:global>
   .logo {
     @apply block font-mono hover:opacity-80 uppercase font-bold text-xl;
+  }
+
+  .headerContainer {
+    @apply fixed left-0 z-50 right-0 top-0 backdrop-blur-lg text-gray-900 bg-white border-b border-gray-200 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100 bg-opacity-90 dark:bg-opacity-50 hue-rotate-15;
+  }
+
+  .header {
+    @apply max-w-full px-4 lg:px-0 mx-auto lg:max-w-2xl flex items-center justify-between w-full py-3;
+  }
+
+  .header nav {
+    @apply space-x-6 font-mono uppercase hidden lg:flex items-center mr-5 w-full justify-end;
   }
 </style>

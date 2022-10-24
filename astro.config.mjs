@@ -7,7 +7,7 @@ import tailwind from "@astrojs/tailwind";
 import vue from "@astrojs/vue";
 import { defineConfig } from "astro/config";
 import { remarkReadingTime } from "./lib/remark-reading-time.mjs";
-import Icons from 'unplugin-icons/vite'
+import { astroImageTools } from "astro-imagetools";
 
 // https://astro.build/config
 export default defineConfig({
@@ -24,13 +24,7 @@ export default defineConfig({
     image({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
+    astroImageTools,
     preact(),
   ],
-  vite: {
-    plugins: [
-      Icons({
-        compiler: 'astro',
-      }),
-    ],
-  },
 });

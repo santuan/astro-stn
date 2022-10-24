@@ -1,0 +1,13 @@
+---
+
+import styles from "@components/BlogPost/BlogPost.module.css";
+
+const { title, description, url } = Astro.props;
+---
+
+<div class={styles.Container}>
+  <a class={styles.Title} href={url}>
+    <span>{title}</span>
+  </a>
+  <p class={styles.Description}>{description}</p>
+</div>

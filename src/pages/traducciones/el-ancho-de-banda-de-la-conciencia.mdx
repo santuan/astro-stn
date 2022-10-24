@@ -1,11 +1,13 @@
 ---
 featured: true
-layout: "../../layouts/BlogPost.astro"
-title: 'El ancho de banda de la conciencia'
-pubDate: '2021-04-01'
-description: 'Que percibimos con nuestros sentidos del diseño de información.'
-heroImage: 'https://res.cloudinary.com/srcouto/image/upload/c_scale,q_100,w_1920/v1624063633/ Next-srcouto/el-ancho-de-banda-de-la-conciencia/banner.png'
+layout: "@layouts/Blog.astro"
+title: "El ancho de banda de la conciencia"
+pubDate: "2021-04-01"
+description: "Que percibimos con nuestros sentidos del diseño de información."
+heroImage: "https://res.cloudinary.com/srcouto/image/upload/c_scale,q_100,w_1920/v1624063633/ Next-srcouto/el-ancho-de-banda-de-la-conciencia/banner.png"
 ---
+
+import { Img } from "astro-imagetools/components";
 
 **Toda persona está tocada por el diseño de la información.**
 
@@ -15,13 +17,12 @@ Es como toparse con un claro en esa selva. Tor Norretranders renombró el ancho 
 
 Este grafico de David McCandless representa la cantidad de información que recibimos a travéz de nuestros sentidos por segundo.
 
-<img
+<Img
   alt="Ancho de banda de la conciencia "
   src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_100,w_1920/v1624063633/Next-srcouto/el-ancho-de-banda-de-la-conciencia/el-ancho-de-banda-de-la-conciencia.png"
-  className="aspect-w-9 aspect-h-12"
   loading="lazy"
   decoding="async"
-  priority
+  placeholder="blurred"
 />
 
 - El sentido de la vista es el más rápido. Tiene el mismo ancho de banda que una red informática. 1250 <small>MB</small>/s
@@ -34,12 +35,13 @@ Este grafico de David McCandless representa la cantidad de información que reci
 
 Pero creo lo más importante es el pequeño cuadrado blanco. Ese 0,7%. La cantidad de la que en realidad somos conscientes.
 
-<img
+<Img
   alt="Ancho de banda de la conciencia "
   src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_100,w_1920/v1624063633/Next-srcouto/el-ancho-de-banda-de-la-conciencia/ancho-conciencia.png"
-  className="aspect-w-9 aspect-h-12"
-    loading="lazy"
+  
+  loading="lazy"
   decoding="async"
+  placeholder="blurred"
   width={1527}
   height={1079}
 />
@@ -50,23 +52,25 @@ Ojos, miradas, observaciones o percepciones. Todos somos muy sensibles a los pat
 
 [Information is Beatiful - Colours In Culture](https://www.informationisbeautiful.net/visualizations/colours-in-cultures/)
 
-<img
+<Img
   alt="Ancho de banda de la conciencia "
   src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_100,w_1920/v1624063633/Next-srcouto/el-ancho-de-banda-de-la-conciencia/colours-in-culture.png"
-    loading="lazy"
-  decoding="async" width={1070}
+  loading="lazy"
+  decoding="async"
+  width={1070}
+  placeholder="blurred"
   height={717}
 />
 
-  
 [Information is Beatiful - Películas que críticos aman pero audiencias no tanto.](https://www.informationisbeautiful.net/visualizations/star-wars-last-jedi-one-of-the-biggest-rotten-tomatoes-audience-vs-critics-score-splits-ever/)
 
-<img
+<Img
   alt="Ancho de banda de la conciencia"
   src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_29,w_1920/v1624063633/Next-srcouto/el-ancho-de-banda-de-la-conciencia/movies-audiences-not-like-but-critics-love.jpg"
-  className="aspect-w-9 aspect-h-12"
-      loading="lazy"
+  
+  loading="lazy"
   decoding="async"
+  placeholder="blurred"
   width={1920}
   height={1118}
 />
@@ -78,7 +82,7 @@ Ojos, miradas, observaciones o percepciones. Todos somos muy sensibles a los pat
   width="100%"
   height="480"
   title="Charla de David McCandless"
-  className="mt-6"
+  class="mt-6"
   frameBorder="0"
   scrolling="no"
   allowFullScreen

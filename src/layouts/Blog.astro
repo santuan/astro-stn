@@ -1,0 +1,166 @@
+---
+import Layout from "@layouts/BaseLayout.astro";
+
+export interface Props {
+  content: {
+    title: string;
+    description: string;
+    pubDate?: string;
+    minutesRead?: string;
+  };
+}
+
+const {
+  content: { title, description, pubDate, minutesRead },
+} = Astro.props;
+---
+
+<Layout>
+  <h1 class="mb-4 font-sans text-3xl text-gray-900 dark:text-white font-medium md:text-4xl">{title}</h1>
+  <h2 class="relative block mb-6 font-sans text-xl md:text-xl text-gray-900 dark:text-white">{description}</h2>
+  <hr class="w-full my-1 max-w-2xl mx-auto border-t border-gray-300 border-dotted dark:border-gray-600" />
+  <div class="flex items-center w-full max-w-2xl mx-auto my-3 justify-start text-gray-800 dark:text-gray-300">
+    <div class="flex items-center">
+      {pubDate && <time class="capitalize font-caption text-base ">{pubDate}</time>}
+    </div>
+    <span class="px-4">•</span>
+    <div class="text-base font-caption min-w-32 md:mt-0">
+      {minutesRead} de lectura
+    </div>
+  </div>
+  <hr class="w-full my-1 max-w-2xl mx-auto border-t border-gray-300 border-dotted dark:border-gray-600" />
+  <article class="w-full pb-12 font-serif prose prose-lg lg:prose-xl hyphens dark:prose-invert max-w-none">
+    <slot />
+  </article>
+</Layout>
+
+<style is:global>
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    @apply max-w-2xl mx-auto text-left;
+  }
+
+  .prose h3 {
+    @apply md:pr-40 scroll-mt-20;
+  }
+
+  .prose a {
+    @apply duration-700 hover:text-blue-500;
+  }
+
+  .prose ul,
+  .prose ol {
+    @apply max-w-xl pl-10 pr-4 md:px-4 mx-auto;
+  }
+
+  .prose.hyphens p {
+    hyphens: auto;
+  }
+
+  .prose blockquote {
+    @apply max-w-3xl pr-12 mr-auto text-2xl md:pr-24 border-l-0;
+    @apply transform translate-x-4 hover:opacity-80 duration-300 select-all;
+  }
+
+  .prose blockquote {
+    font-family: "vollkornVariable";
+    font-variation-settings: "wght" 400;
+  }
+
+  .prose i {
+    font-family: "vollkornVariable";
+    font-variation-settings: "wght" 400;
+  }
+
+  .prose em {
+    @apply text-xl;
+    font-family: "vollkornVariable";
+    font-variation-settings: "wght" 400;
+  }
+
+  .prose p {
+    @apply max-w-2xl  mx-auto dark:text-white;
+  }
+
+  .prose a.external-link {
+    outline: none;
+    vertical-align: bottom;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 0 4px;
+    @apply relative inline-block overflow-hidden font-bold hover:text-white;
+  }
+
+  .prose a.external-link::before,
+  .prose a.external-link::after {
+    pointer-events: none;
+    backface-visibility: hidden;
+    font-smoothing: antialiased;
+  }
+
+  .prose a.external-link::before {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    content: "";
+    transition: transform 0.2s;
+    transform: translateY(95%);
+    @apply bg-blue-500;
+  }
+
+  .prose a.external-link:hover::before,
+  .prose a.external-link:focus::before {
+    transform: translateY(0);
+  }
+
+  .prose .anchor {
+    @apply absolute invisible no-underline;
+    margin-left: -1em;
+    padding-right: 0.5em;
+    width: 80%;
+    max-width: 700px;
+    cursor: pointer;
+  }
+
+  .anchor:hover {
+    @apply visible no-underline;
+  }
+
+  .prose .anchor:after {
+    @apply text-gray-300 dark:text-gray-700;
+    content: "#";
+  }
+
+  .prose *:hover > .anchor {
+    @apply visible no-underline;
+  }
+
+  .prose pre {
+    @apply border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900;
+  }
+
+  .prose code {
+    @apply text-gray-800 dark:text-gray-200 px-1 py-0.5 border border-gray-100 dark:border-gray-800 rounded-md bg-gray-100 dark:bg-gray-900;
+  }
+
+  .prose img {
+    @apply m-0;
+  }
+
+  .prose > :first-child {
+    /* Override removing top margin, causing layout shift */
+    margin-top: 1.25em !important;
+    margin-bottom: 1.25em !important;
+  }
+
+  .prose .audioPost {
+    @apply fixed bottom-0 top-auto left-0 right-0 lg:sticky z-50 p-2 lg:top-12 lg:bottom-auto w-full max-w-2xl mx-auto;
+  }
+</style>

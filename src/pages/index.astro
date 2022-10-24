@@ -1,8 +1,8 @@
 ---
 import PageLayout from "@layouts/Page.astro";
 import SubHeading from "@components/Plugs/SubHeading.jsx";
-import styles from "@components/BlogPost.module.css";
 import Heading from "@components/Plugs/Heading.jsx";
+import BlogPost from "@components/BlogPost/BlogPost.astro";
 
 const posts = (await Astro.glob("./traducciones/*.{md,mdx}")).sort(
   (a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
@@ -20,12 +20,8 @@ const myFeaturedPost = posts.filter((post) => post.frontmatter.featured);
   <SubHeading client:visible title="Traducciones recomendadas" link="true" />
   {
     myFeaturedPost.map((post) => (
-      <div class={styles.Container}>
-        <a class={styles.Title} href={post.url}>
-          <span>{post.frontmatter.title}</span>
-        </a>
-        <p class={styles.Description}>{post.frontmatter.description}</p>
-      </div>
+      <BlogPost title={post.frontmatter.title} description={post.frontmatter.description} url={post.url} />
     ))
   }
+  
 </PageLayout>

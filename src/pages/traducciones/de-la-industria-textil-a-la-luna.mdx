@@ -1,11 +1,13 @@
 ---
 featured: false
-layout: "../../layouts/BlogPost.astro"
+layout: "@layouts/Blog.astro"
 title: "De la industria textil a la Luna"
 description: "La ciudad de Huntsville Alabama."
 pubDate: "Mar 01 2021"
 heroImage: "https://res.cloudinary.com/srcouto/image/upload/v1624063155/Next-srcouto/de-la-industria-textil-a-la-luna/banner.png"
 ---
+
+import { Img } from "astro-imagetools/components";
 
 <audio controls class="w-full max-w-2xl mx-auto ">
   <source
@@ -31,11 +33,12 @@ La <small>UI</small> era un sistema autónomo con componentes de guía básicos 
 
 Sin ellos, el control de la misión habría estado ciego para navegar por el espacio y la misión seria imposible de realizarse.
 
-<img
+<Img
   alt="Unidades de instrumentos del saturno V"
   src="https://res.cloudinary.com/srcouto/image/upload/v1624063156/Next-srcouto/de-la-industria-textil-a-la-luna/saturn-apollo_mywqra.jpg"
   width={1024}
   height={648}
+  placeholder="blurred"
   loading="lazy"
   decoding="async"
 />
@@ -44,22 +47,20 @@ La historia del Saturno V, la <small>UI</small> y las computadoras que guiaron a
 
 Establecido en 1809, Huntsville fue un centro importante para la economía del algodón en Alabama. Para 1815, ya había cinco desmotadoras de algodón que generaban suficiente riqueza para establecer una variedad más amplia de empresas comerciales. La industria textil del algodón dio forma a la actual Huntsville. Y de alguna manera, la industria textil del algodón también dio forma a la exploración espacial.
 
-<img
+<Img
   alt="Welcome to Huntsville"
   src="https://res.cloudinary.com/srcouto/image/upload/v1624063157/Next-srcouto/de-la-industria-textil-a-la-luna/huntsville-alabama-rocket-city_zcngao.jpg"
-  placeholder="blur"
-  blurDataURL="https://res.cloudinary.com/srcouto/image/upload/c_scale,e_blur:50,q_10,w_25/v1624063633/Next-srcouto//de-la-industria-textil-a-la-luna/huntsville-alabama-rocket-city_zcngao.jpg"
+  placeholder="blurred"
   width={1900}
   height={1200}
 />
 
 Para ver cómo las fábricas textiles de algodón de Alabama de principios del siglo XIX se entrelazan con las computadoras de guía de última generación a bordo del Saturn V, necesitamos ver cómo eran estas computadoras y cómo se fabricaron.
 
-<img
+<Img
   alt="Detalle de los hilos magneticos"
   src="https://res.cloudinary.com/srcouto/image/upload/c_fill,w_1400/v1624063157/Next-srcouto/de-la-industria-textil-a-la-luna/wave-saturn.jpg"
-  placeholder="blur"
-  blurDataURL="https://res.cloudinary.com/srcouto/image/upload/c_scale,e_blur:50,q_10,w_25/v1624063157/Next-srcouto/de-la-industria-textil-a-la-luna/wave-saturn.jpg"
+  placeholder="blurred"
   width={1400}
   height={934}
 />
@@ -88,14 +89,12 @@ Estos anillos eran tan pequeños como el ojo de una aguja, y ciertamente es una 
   guiaron al Saturn V a través del espacio fueron hechos a mano, y muchos cosidos e hilados.
 </cite>
 
-<img
+<Img
   alt="space-age needle workers"
   src="https://res.cloudinary.com/srcouto/image/upload/v1624063156/Next-srcouto/de-la-industria-textil-a-la-luna/memorias-lol_g1qgyk.jpg"
-  placeholder="blur"
-  blurDataURL="https://res.cloudinary.com/srcouto/image/upload/c_scale,e_blur:50,q_10,w_25/v1624063633/Next-srcouto//de-la-industria-textil-a-la-luna/memorias-lol_g1qgyk.jpg"
+  placeholder="blurred"
   width={1024}
   height={735}
-  priority
 />
 
 Se utilizaron técnicas de fábricas textiles, solo se reemplazó el hilo de algodón por alambre de cobre. Solo las trabajadores textiles podían realizar un trabajo tan delicado.
