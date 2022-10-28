@@ -16,9 +16,11 @@ const {
 ---
 
 <Layout>
-  <h1 class="mb-4 font-sans text-3xl text-gray-900 dark:text-white font-medium md:text-4xl">{title}</h1>
-  <h2 class="relative block mb-6 font-sans text-xl md:text-xl text-gray-900 dark:text-white">{description}</h2>
-  <hr class="w-full my-1 max-w-2xl mx-auto border-t border-gray-300 border-dotted dark:border-gray-600" />
+  <div class="lg:px-12 max-w-3xl w-full mx-auto">
+    <h1 class="mb-4 font-sans text-3xl text-gray-900 dark:text-white font-medium md:text-4xl">{title}</h1>
+    <h2 class="relative block mb-6 font-sans text-xl md:text-xl text-gray-900 dark:text-white">{description}</h2>
+    <hr class="w-full my-1 max-w-2xl mx-auto border-t border-gray-300 border-dotted dark:border-gray-600" />
+  </div>
   <div class="flex items-center w-full max-w-2xl mx-auto my-3 justify-start text-gray-800 dark:text-gray-300">
     <div class="flex items-center">
       {pubDate && <time class="capitalize font-caption text-base ">{pubDate}</time>}
@@ -41,7 +43,7 @@ const {
   .prose h4,
   .prose h5,
   .prose h6 {
-    @apply max-w-2xl mx-auto text-left;
+    @apply max-w-3xl lg:px-12 mx-auto text-left;
   }
 
   .prose h3 {
@@ -57,6 +59,11 @@ const {
     @apply max-w-xl pl-10 pr-4 md:px-4 mx-auto;
   }
 
+  .prose ul p,
+  .prose ol p {
+    @apply m-0 p-0;
+  }
+
   .prose.hyphens p {
     hyphens: auto;
   }
@@ -65,25 +72,22 @@ const {
     @apply max-w-3xl pr-12 mr-auto text-2xl md:pr-24 border-l-0;
     @apply transform translate-x-4 hover:opacity-80 duration-300 select-all;
   }
-
+  .prose.hyphens blockquote p {
+    hyphens: none;
+  }
   .prose blockquote {
-    font-family: "vollkornVariable";
-    font-variation-settings: "wght" 400;
+    @apply font-serif;
   }
 
   .prose i {
-    font-family: "vollkornVariable";
-    font-variation-settings: "wght" 400;
+    @apply font-serif;
   }
 
   .prose em {
-    @apply text-xl;
-    font-family: "vollkornVariable";
-    font-variation-settings: "wght" 400;
+    @apply text-xl font-serif;
   }
-
   .prose p {
-    @apply max-w-2xl  mx-auto dark:text-white;
+    @apply max-w-3xl px-12  mx-auto dark:text-white;
   }
 
   .prose a.external-link {
