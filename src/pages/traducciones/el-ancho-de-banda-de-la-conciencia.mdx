@@ -8,6 +8,8 @@ heroImage: "https://res.cloudinary.com/srcouto/image/upload/c_scale,q_100,w_1920
 ---
 
 import { Img } from "astro-imagetools/components";
+import Youtube from "@components/Plugs/Youtube.jsx";
+export const components = { Youtube };
 
 **Toda persona está tocada por el diseño de la información.**
 
@@ -38,7 +40,6 @@ Pero creo lo más importante es el pequeño cuadrado blanco. Ese 0,7%. La cantid
 <Img
   alt="Ancho de banda de la conciencia "
   src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_100,w_1920/v1624063633/Next-srcouto/el-ancho-de-banda-de-la-conciencia/ancho-conciencia.png"
-  
   loading="lazy"
   decoding="async"
   placeholder="blurred"
@@ -67,7 +68,6 @@ Ojos, miradas, observaciones o percepciones. Todos somos muy sensibles a los pat
 <Img
   alt="Ancho de banda de la conciencia"
   src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_29,w_1920/v1624063633/Next-srcouto/el-ancho-de-banda-de-la-conciencia/movies-audiences-not-like-but-critics-love.jpg"
-  
   loading="lazy"
   decoding="async"
   placeholder="blurred"
@@ -77,13 +77,9 @@ Ojos, miradas, observaciones o percepciones. Todos somos muy sensibles a los pat
 
 ### Charla de David McCandless
 
-<iframe
-  src="https://embed.ted.com/talks/lang/es/david_mccandless_the_beauty_of_data_visualization"
-  width="100%"
-  height="480"
-  title="Charla de David McCandless"
-  class="mt-6"
-  frameBorder="0"
-  scrolling="no"
-  allowFullScreen
-></iframe>
+<Youtube
+  client:visible
+  title="Charla de David McCandless."
+  video="pLqjQ55tz-U"
+  thumbnail="https://res.cloudinary.com/srcouto/image/upload/v1667003571/Next-srcouto/el-ancho-de-banda-de-la-conciencia/ted-DavidcCandless_fxuqgp.jpg"
+/>

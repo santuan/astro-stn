@@ -11,12 +11,12 @@ export default function Youtube({ video, title, thumbnail }) {
   }, []);
 
   return (
-    <div className="relative" style={{ height: "450px" }}>
-      <div className={`${isActive ? "block" : "hidden"} youtube-container relative`}>
+    <div className="relative">
+      <div className={`${isActive ? "block" : "hidden"} youtube-container aspect-w-16 aspect-h-9 relative`}>
         <iframe width="100%" height="450" src={src} allow="autoplay; encrypted-media" allowFullScreen title={title} />
       </div>
       <div
-        className={`${isActive ? "hidden " : "block"} duration-300 bg-black youtube-container group`}
+        className={`${isActive ? "hidden " : "block"} duration-300 bg-black youtube-container aspect-w-16 aspect-h-9 group`}
         onClick={handleClick}
       >
         <span className="absolute top-0 left-0 right-0 z-50 p-3 font-sans text-lg font-medium text-left text-white duration-300 group-hover:opacity-0">
