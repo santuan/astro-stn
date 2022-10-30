@@ -9,13 +9,19 @@ heroImage: "https://res.cloudinary.com/srcouto/image/upload/v1624063635/Next-src
 
 import { Img } from "astro-imagetools/components";
 import Youtube from "@components/Plugs/Youtube.jsx";
+import Lightbox from "@components/Plugs/Lightbox.vue";
 import ImageCaption from "@components/Plugs/ImageCaption.astro";
 export const components = {
   Youtube,
   ImageCaption,
+  Lightbox
 };
 
 Contenido extraído de la conferencia de Roman Mars en TED. _Créditos a la traducción en español de Cuicani Ríos y Lidia Cámara de la Fuente._
+
+<Lightbox client:visible
+image="https://res.cloudinary.com/srcouto/image/upload/v1624063634/Next-srcouto/el-problema-con-el-diseno-de-banderas/bandera-san-francisco.png"
+/>
 
 <Youtube
   client:visible
@@ -174,16 +180,14 @@ Pero una buena bandera de ciudad representa la ciudad para su gente y su gente p
 
 ### Nota al pie sobre la bandera (o emblema o escudo) de la ciudad de Buenos Aires (mi casa).
 
-<p>
-  <a
-    href="https://es.wikipedia.org/wiki/Bandera_de_la_Ciudad_de_Buenos_Aires"
-    className="font-bold external-link hover:text-blue-200"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Extracto de Wikipedia
-  </a>
-</p>
+<a
+  href="https://es.wikipedia.org/wiki/Bandera_de_la_Ciudad_de_Buenos_Aires"
+  className="font-bold external-link hover:text-blue-200"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Extracto de Wikipedia
+</a>
 
 <Img
   alt="Aplicacion de la bandera de Amsterdam"
