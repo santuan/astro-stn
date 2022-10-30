@@ -1,11 +1,14 @@
 ---
 featured: false
 layout: "@layouts/Blog.astro"
-title: 'La autentificación de dos Factores'
+title: 'La autentificación de tres factores'
 pubDate: '2021-05-20'
 description: 'Sobre la perdida de códigos nucleares.'
 heroImage: 'https://res.cloudinary.com/srcouto/image/upload/v1624063636/Next-srcouto/la-autentificacion-de-dos-factores/banner.png'
 ---
+
+import Youtube from "@components/Plugs/Youtube.jsx";
+export const components = { Youtube };
 
 En 1981 el presidente de los Estados Unidos Ronald Reagan fue baleado en Washington <small>DC</small>. El disparo no fue fatal pero estuvo cerca de serlo.
 
@@ -86,3 +89,11 @@ Las computadoras solo entienden lo que les decimos y no tienen idea de cual era 
 Pero eso si, pueden al menos estar seguras de que somos nosotros quienes estamos preguntando.
 
 _Contenido copiado y traducido del siguiente video de Tom Scott_
+
+<Youtube
+  client:visible
+  title="Why You Should Turn On Two Factor Authentication"
+  video="hGRii5f_uSc"
+  thumbnail="https://res.cloudinary.com/srcouto/image/upload/v1666892130/Next-srcouto/la-autentificacion-de-dos-factores/autentificacion-factores-video_eigw5p.jpg"
+/>
+

@@ -10,13 +10,20 @@ heroImage: "https://res.cloudinary.com/srcouto/image/upload/v1624063635/Next-src
 import { Img } from "astro-imagetools/components";
 import Youtube from "@components/Plugs/Youtube.jsx";
 import ImageCaption from "@components/Plugs/ImageCaption.astro";
-export const components = { Youtube, ImageCaption };
+export const components = {
+  Youtube,
+  ImageCaption,
+};
 
 Contenido extraído de la conferencia de Roman Mars en TED. _Créditos a la traducción en español de Cuicani Ríos y Lidia Cámara de la Fuente._
 
-<Youtube videoId="pnv5iKB2hl4" title="El problema con las banderas de las ciudades" />
-
-<ImageCaption>Se recomienda ver la experiencia completa en video.</ImageCaption>
+<Youtube
+  client:visible
+  title="Roman Mars: Por qué algunas banderas pueden ser las peores jamás diseñadas"
+  video="pnv5iKB2hl4"
+  thumbnail="https://res.cloudinary.com/srcouto/image/upload/v1666891944/Next-srcouto/el-problema-con-el-diseno-de-banderas/Roman_Mars-flaghs_vjabmu.jpg"
+/>
+<ImageCaption title="Se recomienda ver la experiencia completa en video." />
 
 Roman Mars está obsesionado con las banderas y en esta conferencia nos trasmite que es lo que hace a una bandera buena y también que no. Símbolos del orgullo ciudadano cuentan con frecuencia con diseños horribles. Pero no tiene que ser así.
 

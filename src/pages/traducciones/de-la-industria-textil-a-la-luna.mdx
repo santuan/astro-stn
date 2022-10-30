@@ -8,18 +8,15 @@ heroImage: "https://res.cloudinary.com/srcouto/image/upload/v1624063155/Next-src
 ---
 
 import { Img } from "astro-imagetools/components";
+import Youtube from "@components/Plugs/Youtube.jsx";
+import AudioPost from "@components/Plugs/AudioPost.jsx";
+import ImageCaption from "@components/Plugs/ImageCaption.astro";
+export const components = { Youtube,AudioPost, ImageCaption };
 
-<audio controls class="w-full max-w-2xl mx-auto ">
-  <source
-    src="https://res.cloudinary.com/srcouto/video/upload/q_42/v1624413641/Next-srcouto/de-la-industria-textil-a-la-luna/de-la-industria-textil-a-la-luna_knfawb.ogg"
-    type="audio/ogg"
-  />
-  <source
-    src="https://res.cloudinary.com/srcouto/video/upload/q_42/v1624413641/Next-srcouto/de-la-industria-textil-a-la-luna/de-la-industria-textil-a-la-luna_knfawb.mp3"
-    type="audio/mpeg"
-  />
-  Elemento audio
-</audio>
+<AudioPost
+  oggUrl="https://res.cloudinary.com/srcouto/video/upload/q_42/v1624413641/Next-srcouto/de-la-industria-textil-a-la-luna/de-la-industria-textil-a-la-luna_knfawb.ogg"
+  mp3Url="https://res.cloudinary.com/srcouto/video/upload/q_42/v1624413641/Next-srcouto/de-la-industria-textil-a-la-luna/de-la-industria-textil-a-la-luna_knfawb.mp3"
+/>
 
 Contenido extraído y traducido de <a href="https://uxdesign.cc/how-the-cotton-mill-put-a-man-on-the-moon-3ddf7e7f6281" class="external-link" target="_blank" rel="noopener noreferrer">uxdesign.cc</a>
 
@@ -108,3 +105,19 @@ Lo que una vez fue una economía del algodón se ha convertido en el segundo par
 Las trabajadores textiles que tejieron los módulos de memoria de la computadora en el Saturn V siguen siendo una parte fundamental de la historia de la exploración espacial y la tecnología de la computadora. Gran parte del trabajo detrás del Saturo V se realizó manualmente, en fábricas, por mujeres con experiencia en textiles y telas.
 
 Huntsville, Alabama es la ciudad que une todo esto. A principios del siglo XIX, la ciudad en ciernes estaba llena de trabajadores textiles de algodón. Más de dos siglos después, es una "ciudad cohete" llena de científicos, ingenieros e investigadores.
+
+<Youtube
+  client:visible
+  title="Visita guiada al Rocket Center de Hunstville."
+  video="dI-JW2UIAG0"
+  thumbnail="https://res.cloudinary.com/srcouto/image/upload/v1666892632/Next-srcouto/de-la-industria-textil-a-la-luna/C%C3%B3mo_piloteo_la_NASA_el_Saturno_V_-_M%C3%A1s_inteligente_todos_los_d%C3%ADas_ngcctb.jpg"
+/>
+
+<div id="space-x-suit" className="scroll-mt-24 pt-24">
+  <Youtube
+    client:visible
+    title="Los trajes espaciales de SpaceX"
+    video="dr0on1Ij7JU"
+    thumbnail="https://res.cloudinary.com/srcouto/image/upload/v1666892632/Next-srcouto/de-la-industria-textil-a-la-luna/SpaceX_spacesuits_Take_a_deep_dive_oqd1it.jpg"
+  />
+</div>
