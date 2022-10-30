@@ -11,9 +11,10 @@ import { Img } from "astro-imagetools/components";
 import Youtube from "@components/Plugs/Youtube.jsx";
 import AudioPost from "@components/Plugs/AudioPost.jsx";
 import ImageCaption from "@components/Plugs/ImageCaption.astro";
-export const components = { Youtube,AudioPost, ImageCaption };
+export const components = { Youtube, AudioPost, ImageCaption };
 
 <AudioPost
+  client:visible
   oggUrl="https://res.cloudinary.com/srcouto/video/upload/q_42/v1624413641/Next-srcouto/de-la-industria-textil-a-la-luna/de-la-industria-textil-a-la-luna_knfawb.ogg"
   mp3Url="https://res.cloudinary.com/srcouto/video/upload/q_42/v1624413641/Next-srcouto/de-la-industria-textil-a-la-luna/de-la-industria-textil-a-la-luna_knfawb.mp3"
 />
@@ -35,6 +36,7 @@ Sin ellos, el control de la misión habría estado ciego para navegar por el esp
   src="https://res.cloudinary.com/srcouto/image/upload/v1624063156/Next-srcouto/de-la-industria-textil-a-la-luna/saturn-apollo_mywqra.jpg"
   width={1024}
   height={648}
+    client:visible
   placeholder="blurred"
 />
 
@@ -47,6 +49,7 @@ Establecido en 1809, Huntsville fue un centro importante para la economía del a
   src="https://res.cloudinary.com/srcouto/image/upload/v1624063157/Next-srcouto/de-la-industria-textil-a-la-luna/huntsville-alabama-rocket-city_zcngao.jpg"
   placeholder="blurred"
   width={1900}
+    client:visible
   height={1200}
 />
 
@@ -58,6 +61,7 @@ Para ver cómo las fábricas textiles de algodón de Alabama de principios del s
   placeholder="blurred"
   width={1400}
   height={934}
+    client:visible
 />
 
 ### Computadoras en el Saturno V
@@ -89,6 +93,7 @@ Estos anillos eran tan pequeños como el ojo de una aguja, y ciertamente es una 
   src="https://res.cloudinary.com/srcouto/image/upload/v1624063156/Next-srcouto/de-la-industria-textil-a-la-luna/memorias-lol_g1qgyk.jpg"
   placeholder="blurred"
   width={1024}
+    client:visible
   height={735}
 />
 
