@@ -17,6 +17,8 @@
     "@astrojs/react": "^1.2.1",
     "@astrojs/rss": "^1.0.3",
     "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/solid-js": "^1.2.2",
+    "@astrojs/svelte": "^1.0.2",
     "@astrojs/tailwind": "^2.1.1",
     "@astrojs/vue": "^1.2.1",
     "@fontsource/fira-sans": "^4.5.10",
@@ -40,6 +42,8 @@
     "rehype-autolink-headings": "^6.1.1",
     "rehype-slug": "^5.0.1",
     "sharp": "^0.31.1",
+    "solid-js": "^1.4.3",
+    "svelte": "^3.46.4",
     "vue": "^3.2.41"
   },
   "devDependencies": {

@@ -25,3 +25,6 @@ body {
   @apply bg-gray-900 dark:bg-gray-100;
 }
 
+.turbo-progress-bar {
+  @apply bg-gray-900 dark:bg-white
+}

@@ -7,21 +7,16 @@ description: "Principios de diseños aplicados a símbolos."
 heroImage: "https://res.cloudinary.com/srcouto/image/upload/v1624063635/Next-srcouto/el-problema-con-el-diseno-de-banderas/banner.png"
 ---
 
-import { Img } from "astro-imagetools/components";
 import Youtube from "@components/Plugs/Youtube.jsx";
-import Lightbox from "@components/Plugs/Lightbox.vue";
+import ImageLightbox from "@components/Plugs/ImageLightbox.astro";
 import ImageCaption from "@components/Plugs/ImageCaption.astro";
 export const components = {
   Youtube,
+  ImageLightbox,
   ImageCaption,
-  Lightbox
 };
 
 Contenido extraído de la conferencia de Roman Mars en TED. _Créditos a la traducción en español de Cuicani Ríos y Lidia Cámara de la Fuente._
-
-<Lightbox client:visible
-image="https://res.cloudinary.com/srcouto/image/upload/v1624063634/Next-srcouto/el-problema-con-el-diseno-de-banderas/bandera-san-francisco.png"
-/>
 
 <Youtube
   client:visible
@@ -51,12 +46,11 @@ _Según la Asociación Vexilológica de EE. UU una bandera debe:_
 4. No utilizar letras o tipografías. (No se deben usar letras porque no es posible leerlas desde lejos)
 5. Ser distintiva.
 
-<Img
-  alt="Bandera Chicago"
-  src="https://res.cloudinary.com/srcouto/image/upload/v1624063634/Next-srcouto/el-problema-con-el-diseno-de-banderas/bandera-chicago.png"
-  placeholder="blurred"
-  width={1070}
-  height={717}
+<ImageLightbox
+  title="Bandera Chicago2"
+  image="https://res.cloudinary.com/srcouto/image/upload/v1624063634/Next-srcouto/el-problema-con-el-diseno-de-banderas/bandera-chicago.png"
+  width="1070"
+  height="717"
 />
 
 ### ¿Cómo diseñar una gran bandera? El caso de Chicago
@@ -92,17 +86,16 @@ Así de profunda es la relevancia de su bandera.
 
 No solo se debe pensar entonces a que la gente adora Chicago y, con él su bandera; sino que existe la posibilidad que las personas amen más su ciudad porque su bandera es "genial" o les representa. Una retroalimentación entre el buen simbolismo y el orgullo cívico.
 
-<Img
-  alt="Bandera San Francisco"
-  src="https://res.cloudinary.com/srcouto/image/upload/v1624063634/Next-srcouto/el-problema-con-el-diseno-de-banderas/bandera-san-francisco.png"
-  placeholder="blurred"
-  width={1070}
-  height={717}
+<ImageLightbox
+  title="Bandera San Francisco"
+  image="https://res.cloudinary.com/srcouto/image/upload/v1667185632/Next-srcouto/el-problema-con-el-diseno-de-banderas/bandera-san-francisco_mq1n5i.png"
+  width="1070"
+  height="717"
 />
 
 ### ¿Cómo diseñar una bandera "fea"? El caso de San Francisco
 
-El/Next-srcouto/el-problema-con-el-diseno-de-banderas/bandera-san-francisco.png.
+El primer punto es recordemos "Ser tan sencilla que cualquiera pudiese dibujarla". En este caso una bandera relativamente compleja.
 
 El elemento principal de la bandera de San Francisco es un fénix que representa su renacimiento de las cenizas después de los incendios devastadores de 1850. Es un símbolo poderoso para San Francisco. El diseño del fénix es un poco/muy tosco y tiene demasiados detalles, así que si intentáramos dibujarlo, no lo lograríamos.
 
@@ -132,12 +125,11 @@ Estos son principios que se suelen aplicar rigurosamente en el diseño en sus in
 
 Hay un problema con los escudos municipales: Están diseñados para usarse en papel donde uno puede leerlos, no para banderas que se ven ondeando a 30m de distancia.
 
-<Img
-  alt="Bandera Amsterdam - Rediseño"
-  src="https://res.cloudinary.com/srcouto/image/upload/v1624063634/Next-srcouto/el-problema-con-el-diseno-de-banderas/redisenio-bandera-amsterdam.png"
-  placeholder="blurred"
-  width={1807}
-  height={835}
+<ImageLightbox
+  title="Bandera Amsterdam - Rediseño"
+  image="https://res.cloudinary.com/srcouto/image/upload/v1624063634/Next-srcouto/el-problema-con-el-diseno-de-banderas/redisenio-bandera-amsterdam.png"
+  width="1807"
+  height="835"
 />
 
 ### De escudo a bandera. El caso de la ciudad de Ámsterdam.
@@ -148,12 +140,11 @@ El rediseño de la bandera de Ámsterdam lejos de incluir el blasón completo en
 
 ¿Qué es lo que la hace una "gran bandera" entonces? El hecho de que uno puede encontrar esa bandera y sus cruces por todo Ámsterdam, como en el caso de Chicago.
 
-<Img
+<img
   alt="Aplicacion de la bandera de Amsterdam"
   src="https://res.cloudinary.com/srcouto/image/upload/v1624063634/Next-srcouto/el-problema-con-el-diseno-de-banderas/aplicacion-bandera-amsterdam.jpg"
-  placeholder="blurred"
-  width={1913}
-  height={969}
+  width="1913"
+  height="969"
 />
 
 ### ¿Cómo diseñar una bandera?
@@ -178,7 +169,16 @@ Los deportes pueden rompernos el corazón. Y a muchas personas no les importan l
 
 Pero una buena bandera de ciudad representa la ciudad para su gente y su gente para todo el mundo. Y cuando la bandera es hermosa, esa conexión es preciosa.
 
-### Nota al pie sobre la bandera (o emblema o escudo) de la ciudad de Buenos Aires (mi casa).
+### Nota al pie sobre la bandera de la ciudad de Buenos Aires.
+
+<ImageLightbox
+  title="Aplicacion de la bandera de Amsterdam"
+  image="https://res.cloudinary.com/srcouto/image/upload/v1624063634/Next-srcouto/el-problema-con-el-diseno-de-banderas/Bandera_de_la_Ciudad_de_Buenos_Aires.jpg"
+  width="1920"
+  height="1080"
+/>
+
+<blockquote>
 
 <a
   href="https://es.wikipedia.org/wiki/Bandera_de_la_Ciudad_de_Buenos_Aires"
@@ -188,16 +188,6 @@ Pero una buena bandera de ciudad representa la ciudad para su gente y su gente p
 >
   Extracto de Wikipedia
 </a>
-
-<Img
-  alt="Aplicacion de la bandera de Amsterdam"
-  src="https://res.cloudinary.com/srcouto/image/upload/v1624063634/Next-srcouto/el-problema-con-el-diseno-de-banderas/Bandera_de_la_Ciudad_de_Buenos_Aires.jpg"
-  placeholder="blurred"
-  width={1920}
-  height={1080}
-/>
-
-<blockquote>
 
 La Bandera de la Ciudad Autónoma de Buenos Aires data de 1580, pero fue establecida oficialmente el 24 de octubre de 1995 por el entonces intendente municipal Jorge Domínguez.
 
@@ -217,10 +207,9 @@ Pero más creo en la parte de la sociedad que se siente en conflicto con esta es
 
 Estética y diseño. Buenas y malas imágenes. En uno y en todos los sentidos, extremos de lo mismo.
 
-<Img
-  alt="Aplicacion de la bandera de Amsterdam"
-  src="https://res.cloudinary.com/srcouto/image/upload/v1624063634/Next-srcouto/el-problema-con-el-diseno-de-banderas/las-banderas-de-la-ciudad.jpg"
-  placeholder="blurred"
-  width={1002}
-  height={668}
+<ImageLightbox
+  title="Aplicacion de la bandera de Amsterdam"
+  image="https://res.cloudinary.com/srcouto/image/upload/v1624063634/Next-srcouto/el-problema-con-el-diseno-de-banderas/las-banderas-de-la-ciudad.jpg"
+  width="1002"
+  height="668"
 />
