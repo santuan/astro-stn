@@ -7,9 +7,9 @@ description: "Que percibimos con nuestros sentidos del diseño de información."
 heroImage: "https://res.cloudinary.com/srcouto/image/upload/c_scale,q_100,w_1920/v1624063633/ Next-srcouto/el-ancho-de-banda-de-la-conciencia/banner.png"
 ---
 
-import { Img } from "astro-imagetools/components";
 import Youtube from "@components/Plugs/Youtube.jsx";
-export const components = { Youtube };
+import ImageLightbox from "@components/Plugs/ImageLightbox.astro";
+export const components = { Youtube, ImageLightbox };
 
 **Toda persona está tocada por el diseño de la información.**
 
@@ -19,12 +19,9 @@ Es como toparse con un claro en esa selva. Tor Norretranders renombró el ancho 
 
 Este grafico de David McCandless representa la cantidad de información que recibimos a travéz de nuestros sentidos por segundo.
 
-<Img
+<ImageLightbox
   alt="Ancho de banda de la conciencia "
   src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_100,w_1920/v1624063633/Next-srcouto/el-ancho-de-banda-de-la-conciencia/el-ancho-de-banda-de-la-conciencia.png"
-  loading="lazy"
-  decoding="async"
-  placeholder="blurred"
 />
 
 - El sentido de la vista es el más rápido. Tiene el mismo ancho de banda que una red informática. 1250 <small>MB</small>/s
@@ -37,14 +34,9 @@ Este grafico de David McCandless representa la cantidad de información que reci
 
 Pero creo lo más importante es el pequeño cuadrado blanco. Ese 0,7%. La cantidad de la que en realidad somos conscientes.
 
-<Img
+<ImageLightbox
   alt="Ancho de banda de la conciencia "
   src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_100,w_1920/v1624063633/Next-srcouto/el-ancho-de-banda-de-la-conciencia/ancho-conciencia.png"
-  loading="lazy"
-  decoding="async"
-  placeholder="blurred"
-  width={1527}
-  height={1079}
 />
 
 Es decir que gran parte de la percepción del mundo que nos rodea es tan visual como inconsciente.
@@ -53,26 +45,18 @@ Ojos, miradas, observaciones o percepciones. Todos somos muy sensibles a los pat
 
 [Information is Beatiful - Colours In Culture](https://www.informationisbeautiful.net/visualizations/colours-in-cultures/)
 
-<Img
+<ImageLightbox
   alt="Ancho de banda de la conciencia "
   src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_100,w_1920/v1624063633/Next-srcouto/el-ancho-de-banda-de-la-conciencia/colours-in-culture.png"
-  loading="lazy"
-  decoding="async"
-  width={1070}
-  placeholder="blurred"
-  height={717}
 />
 
 [Information is Beatiful - Películas que críticos aman pero audiencias no tanto.](https://www.informationisbeautiful.net/visualizations/star-wars-last-jedi-one-of-the-biggest-rotten-tomatoes-audience-vs-critics-score-splits-ever/)
 
-<Img
+<ImageLightbox
   alt="Ancho de banda de la conciencia"
   src="https://res.cloudinary.com/srcouto/image/upload/c_scale,q_29,w_1920/v1624063633/Next-srcouto/el-ancho-de-banda-de-la-conciencia/movies-audiences-not-like-but-critics-love.jpg"
-  loading="lazy"
-  decoding="async"
-  placeholder="blurred"
-  width={1920}
-  height={1118}
+  width="1920"
+  height="1118"
 />
 
 ### Charla de David McCandless

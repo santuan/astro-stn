@@ -1,6 +1,7 @@
 ---
+import BlogPost from "@components/BlogPost/BlogPost.astro";
+import SubHeading from "@components/Plugs/SubHeading.jsx";
 import Layout from "@layouts/BaseLayout.astro";
-
 export interface Props {
   content: {
     title: string;
@@ -13,6 +14,12 @@ export interface Props {
 const {
   content: { title, description, pubDate, minutesRead },
 } = Astro.props;
+
+const posts = (await Astro.glob("../pages/traducciones/*.{md,mdx}")).sort(
+  (a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+
+const myFeaturedPost = posts.filter((post) => post.frontmatter.featured);
 ---
 
 <Layout>
@@ -34,6 +41,14 @@ const {
   <article class="w-full pb-12 font-serif prose prose-lg lg:prose-xl hyphens dark:prose-invert max-w-none">
     <slot />
   </article>
+  <div class="max-w-2xl w-full mx-auto">
+    <SubHeading client:visible title="Más traducciones" link="true" />
+    {
+      myFeaturedPost.map((post) => (
+        <BlogPost title={post.frontmatter.title} description={post.frontmatter.description} url={post.url} />
+      ))
+    }
+  </div>
 </Layout>
 
 <style is:global>
@@ -69,7 +84,7 @@ const {
   }
 
   .prose blockquote {
-    @apply max-w-3xl pr-12 mr-auto text-2xl md:pr-24 border-l-0;
+    @apply max-w-3xl pr-12 mr-auto text-lg lg:text-2xl md:pr-24 border-l-0;
     @apply transform translate-x-4 hover:opacity-80 duration-300;
   }
   .prose.hyphens blockquote p {
@@ -87,9 +102,8 @@ const {
     @apply text-xl font-serif;
   }
   .prose p {
-    @apply max-w-3xl lg:px-12  mx-auto dark:text-white;
+    @apply lg:max-w-3xl lg:px-12 mx-auto dark:text-white;
   }
-
 
   .prose .anchor {
     @apply absolute invisible no-underline;

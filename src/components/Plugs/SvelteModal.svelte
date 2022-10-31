@@ -2,14 +2,14 @@
   import Modal from "./Modal.svelte";
 
   let showModal = false;
-  export let title;
-  export let image;
+  export let alt;
+  export let src;
 </script>
 
 <button
   type="button"
   on:click={() => (showModal = true)}
-  class="absolute top-0 right-0 rounded-md bg-black bg-opacity-20 p-2 m-2 duration-300 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+  class="absolute hidden lg:flex top-0 right-0 rounded-md bg-black bg-opacity-20 p-2 m-2 duration-300 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -29,6 +29,6 @@
 
 {#if showModal}
   <Modal on:close={() => (showModal = false)}>
-    <img src={image} alt={title} />
+    <img src={src} alt={alt} />
   </Modal>
 {/if}
